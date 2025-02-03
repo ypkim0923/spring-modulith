@@ -14,7 +14,7 @@ public class DeviceRegistrationService {
     public void register(DeviceRegistrationDto dto) {
 
         var device = Device.builder()
-                           .id(dto.deviceId())
+                           .deviceId(dto.deviceId())
                            .name(dto.name())
                            .type(dto.type())
                            .build();
