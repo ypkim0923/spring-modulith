@@ -26,3 +26,8 @@ spring:
 #      jdbc:
 #        schema-initialization:
 #          enabled: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
