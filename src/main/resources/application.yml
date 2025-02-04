@@ -23,6 +23,9 @@ spring:
       republish-outstanding-events-on-restart: true
       externalization:
         enabled: true
+  rabbitmq:
+    username: "myuser"
+    password: "secret"
 #      jdbc:
 #        schema-initialization:
 #          enabled: true
