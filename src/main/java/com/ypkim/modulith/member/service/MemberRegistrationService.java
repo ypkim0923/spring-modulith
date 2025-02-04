@@ -1,8 +1,8 @@
 package com.ypkim.modulith.member.service;
 
+import com.ypkim.modulith.member.DeviceEvent;
 import com.ypkim.modulith.member.domain.Member;
 import com.ypkim.modulith.member.domain.MemberService;
-import com.ypkim.modulith.member.service.dto.DeviceEvent;
 import com.ypkim.modulith.member.service.dto.MemberRegistrationDto;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
