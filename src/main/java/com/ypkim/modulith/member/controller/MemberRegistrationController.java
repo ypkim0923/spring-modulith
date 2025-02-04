@@ -17,7 +17,7 @@ public class MemberRegistrationController {
     private final MemberRegistrationService service;
 
     @PostMapping
-    public ResponseEntity<Void> post(@RequestBody MemberRegistrationDto dto) {
+    public ResponseEntity<Void> post(@RequestBody MemberRegistrationDto dto) throws Exception {
 
         service.register(dto);
 

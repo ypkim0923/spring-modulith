@@ -19,7 +19,7 @@ public class MemberRegistrationService {
     private final ApplicationEventPublisher publisher;
 
     @Transactional
-    public void register(MemberRegistrationDto dto) {
+    public void register(MemberRegistrationDto dto) throws Exception {
         Member member = Member.builder()
                               .email(dto.email())
                               .password(dto.password())
@@ -28,6 +28,8 @@ public class MemberRegistrationService {
                               .build();
 
         service.save(member);
+
+        Thread.sleep(3_000);
 
         publisher.publishEvent(new DeviceEvent("test"));
     }

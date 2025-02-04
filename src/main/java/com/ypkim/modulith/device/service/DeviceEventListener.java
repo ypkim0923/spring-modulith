@@ -12,7 +12,7 @@ public class DeviceEventListener {
     @ApplicationModuleListener
     void on(DeviceEvent event) throws Exception {
         log.info("Event Start!!");
-        Thread.sleep(10_000);
+        Thread.sleep(5_000);
         log.info("Event End!!");
         log.info("Event Data : {}", event.data());
     }
