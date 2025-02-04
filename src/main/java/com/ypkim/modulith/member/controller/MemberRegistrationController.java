@@ -1,8 +1,8 @@
-package com.ypkim.modulith.user.controller;
+package com.ypkim.modulith.member.controller;
 
 
-import com.ypkim.modulith.user.service.UserRegistrationService;
-import com.ypkim.modulith.user.service.dto.UserRegistrationDto;
+import com.ypkim.modulith.member.service.MemberRegistrationService;
+import com.ypkim.modulith.member.service.dto.MemberRegistrationDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -13,11 +13,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/user")
 @RequiredArgsConstructor
-public class UserRegistrationController {
-    private final UserRegistrationService service;
+public class MemberRegistrationController {
+    private final MemberRegistrationService service;
 
     @PostMapping
-    public ResponseEntity<Void> post(@RequestBody UserRegistrationDto dto) {
+    public ResponseEntity<Void> post(@RequestBody MemberRegistrationDto dto) {
 
         service.register(dto);
 

@@ -1,4 +1,4 @@
-package com.ypkim.modulith.user.domain;
+package com.ypkim.modulith.member.domain;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -7,11 +7,11 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 @Transactional
 @RequiredArgsConstructor
-public class UserService {
+public class MemberService {
 
-    private final UserRepository repository;
+    private final MemberRepository repository;
 
-    public User save(User user) {
-        return repository.save(user);
+    public Member save(Member member) {
+        return repository.save(member);
     }
 }

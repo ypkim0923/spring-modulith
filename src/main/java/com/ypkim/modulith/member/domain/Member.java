@@ -1,4 +1,4 @@
-package com.ypkim.modulith.user.domain;
+package com.ypkim.modulith.member.domain;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class User {
+public class Member {
     @Id
     @GeneratedValue
     private Long id;
