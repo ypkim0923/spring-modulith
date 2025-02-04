@@ -7,15 +7,22 @@ spring:
 
   datasource:
     driver-class-name: org.postgresql.Driver
-    url:
-      jdbc:postgresql://localhost:5432/mydatabase   # H2 DB 연결 주소 (In-Memory Mode)
-    username: myuser        # H2 DB 접속 ID (사용자 지정)
-    password: secret        # H2 DB 접속 PW (사용자 지정)
+    url: jdbc:postgresql://localhost:5432/mydatabase
+    username: myuser
+    password: secret
 
   jpa:
-    database-platform: org.hibernate.dialect.H2Dialect
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
     hibernate:
-      ddl-auto: create        # DB 초기화 전략 (none, create, create-drop, update, validate)
+      ddl-auto: create
     properties:
       hibernate:
-        dialect: org.hibernate.dialect.H2Dialect
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  modulith:
+    events:
+      republish-outstanding-events-on-restart: true
+      externalization:
+        enabled: true
+#      jdbc:
+#        schema-initialization:
+#          enabled: true
