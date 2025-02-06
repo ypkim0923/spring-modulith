@@ -1,7 +1,7 @@
 package com.ypkim.modulith.device.service;
 
 import com.ypkim.modulith.device.domain.Device;
-import com.ypkim.modulith.device.domain.DeviceService;
+import com.ypkim.modulith.device.domain.DeviceRepository;
 import com.ypkim.modulith.device.service.dto.DeviceRegistrationDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 @Service
 @RequiredArgsConstructor
 public class DeviceRegistrationService {
-    private final DeviceService service;
+    private final DeviceRepository repository;
 
     public void register(DeviceRegistrationDto dto) {
 
@@ -19,6 +19,6 @@ public class DeviceRegistrationService {
                            .type(dto.type())
                            .build();
 
-        service.save(device);
+        repository.save(device);
     }
 }
